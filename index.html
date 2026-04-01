@@ -18,11 +18,11 @@
     }
 
     html, body {
-      height: 100%;
+      min-height: 100%;
       background: var(--bg);
       color: var(--fg);
       font-family: 'DM Mono', monospace;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     /* Grain overlay */
@@ -224,9 +224,20 @@
     }
 
     @media (max-width: 600px) {
-      .container { padding: 32px 28px; }
+      .container {
+        padding: 32px 28px;
+        min-height: 100vh;
+      }
       .corner-label { top: 32px; right: 28px; }
-      .footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-bottom: 8px;
+      }
+      .links {
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -240,7 +251,7 @@
       <p class="eyebrow">Something is coming</p>
       <h1>Paul<br><em>Vickery</em></h1>
       <div class="divider"></div>
-      <p class="tagline">Taunton, Somerset.</p>
+      <p class="tagline">...<br>Taunton, Somerset.</p>
       <div class="status">
         <div class="dot"></div>
         <span>Currently building</span>
@@ -250,11 +261,7 @@
     <footer class="footer">
       <span class="location">Taunton · Somerset · UK</span>
       <nav class="links">
-        <a href="mailto:paul@vickery.dev">Email</a>
+        <a href="/cdn-cgi/l/email-protection#5a2a3b2f361a2c3339313f2823743e3f2c">Email</a>
         <a href="https://github.com/pvckry" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/pvckry" target="_blank">LinkedIn</a>
       </nav>
-    </footer>
-  </div>
-</body>
-</html>
